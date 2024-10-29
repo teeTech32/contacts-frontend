@@ -1,0 +1,256 @@
+body {
+ 
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  
+}
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  align-content: center;
+  width: 100px;
+  height: 100px;
+  border: 8px solid;
+  border-color: #ee277a transparent #ee277a transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.style{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.styleU {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media(min-width: 640px){
+  .styleU{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  }
+  
+}
+.styleLogout {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background:transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.styleH{
+  margin: 0 ;
+  padding: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to right, #2c5364, #0f2027);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.slider{
+  padding-bottom: 150px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: rotate 20s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg)
+  }
+}
+.slider div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i)*72deg)) translateZ(250px)
+}
+.user{
+  background: linear-gradient(to right,  #41606d, #041218);
+  border-radius:1px;
+  margin: 5rem; 
+}
+.button{
+  margin-top:30px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  justify-content: center;
+}
+.button button{
+  position:relative;
+  padding: 5px 10px;
+  color:#07090a;
+  background-color: #2196f3;
+  letter-spacing: none;
+  text-decoration: none;
+  font-size: 14px;
+  overflow: hidden;
+  transition: 0.2s;
+  border-radius: 5px;
+}
+.button button:hover{
+  text-transform: uppercase;
+  color:#157a1e;
+  background:#1df36f;
+  box-shadow:0 0 10px #1df36f, 0 0 40px #1df36f, 0 0 80px #1df36f;
+  transition-delay:0.0s;
+  cursor: pointer;
+}
+@media(min-width:1200px){
+.center {
+    padding-top: 10px;
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media(min-width:600px){
+  .center{
+    padding-top: 10px;
+    gap:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+@media(min-width:640px){
+.outer {
+    position: relative;
+   
+  }
+}
+@media(max-width:1200px) {
+  .outer {
+    position: relative;
+     
+  }
+}
+.but{
+  height: 50px;
+  width: 120px;
+  border-radius: 50px;
+}
+.cir{
+  height: 50px;
+  width: 120px;
+  border-radius: 50px;
+}
+.outer button, .outer span{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%)
+}
+.outer button{
+  background:#111;
+  color: #f2f2f2;
+  outline: none;
+  border: none;
+  z-index: 9;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform:uppercase;
+}
+.but button, .cir button{
+  height: 43px;
+  width: 113px;
+  border-radius:50px; 
+}
+.outer span{
+  height: 100%;
+  width: 100%;
+  background: inherit;
+}
+.but span, .cir span{
+  border-radius: 50px;
+}
+.outer:hover span:nth-child(1) {
+  filter: blur(7px)
+}
+.outer:hover span:nth-child(2) {
+  filter: blur(14px)
+}
+.outer .cir{
+  margin-right: 5px;
+}
+.outer:hover{
+  background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+  animation: rotat 1.5s linear infinite;
+}
+@keyframes rotat {
+  0%{
+    filter: hue-rotate(0deg);
+  }
+  100%{
+    filter: hue-rotate(360deg);
+  }
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
