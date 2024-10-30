@@ -7,6 +7,8 @@ import { toast } from "react-toastify"
 import Spinner from "../Layouts/Spinner"
 import {FaEye, FaEyeSlash} from "react-icons/fa6"
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 function SignUp() {
   const navigate = useNavigate()
   const [confirmPassword, setConfirmPassword] = useState('')
@@ -29,7 +31,7 @@ function SignUp() {
       }
       signinDataCopy.user_image = password
       if(password===confirmPassword){
-        const response = await fetch('https://contacts-backend-w5bb.onrender.com/register/', {
+        const response = await fetch('apiUrl/register/', {
           method:"POST",
           headers:{"Content-Type": "application/json" },
           body: JSON.stringify(signinDataCopy)
