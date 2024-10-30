@@ -43,11 +43,11 @@ function ContactForm(){
       inputDataCopy.username = username
       const formData = new FormData();
       formData.append('file', imageInput, imageInput.name)
-      await fetch('http://localhost:8000/UploadImages/', {
+      await fetch('https://contacts-backend-w5bb.onrender.com/UploadImages/', {
         method:"POST",
         body:formData,
       })
-      const response = await fetch("http://localhost:8000/contacts/", {
+      const response = await fetch("https://contacts-backend-w5bb.onrender.com/contacts/", {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body:JSON.stringify(inputDataCopy),
