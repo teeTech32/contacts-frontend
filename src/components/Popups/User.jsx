@@ -82,7 +82,7 @@ function User(){
         })
         const formData = new FormData();
         formData.append('file', editUserImage, editUserImage.name)
-        await fetch(https://contacts-backend-w5bb.onrender.com/UpdateUser/${username}`, {
+        await fetch(`https://contacts-backend-w5bb.onrender.com/UpdateUser/${username}`, {
           method: "PATCH",
           body: formData
         })
