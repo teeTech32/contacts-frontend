@@ -29,7 +29,7 @@ function SignUp() {
       }
       signinDataCopy.user_image = password
       if(password===confirmPassword){
-        const response = await fetch('http://localhost:8000/register/', {
+        const response = await fetch('https://contacts-backend-w5bb.onrender.com/register/', {
           method:"POST",
           headers:{"Content-Type": "application/json" },
           body: JSON.stringify(signinDataCopy)
