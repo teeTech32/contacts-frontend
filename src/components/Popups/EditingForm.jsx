@@ -6,6 +6,8 @@ import DeletIcon from "../ReactIcons/DeleteIcon"
 import {toast} from "react-toastify"
 import Spinner from "../Layouts/Spinner"
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 function EditingForm(){
   const navigate = useNavigate()
   const { setAddedit, addedit, fetchContacts, editData, setEditData, editId, imageEdit, setImageEdit, isloading, setIsloading, setContacts, contacts} = useContext(contactContext)
@@ -28,7 +30,7 @@ function EditingForm(){
     setIsloading(true)
     try{
       if(imageEdit === null){
-        const response = await fetch(`https://contacts-backend-w5bb.onrender.com/contact/${editId}?`, {
+        const response = await fetch(`apiUrl/contact/${editId}?`, {
           method: "PATCH",
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(editData),
@@ -50,7 +52,7 @@ function EditingForm(){
           ...editData
         }
         editCopyData.photo_name = imageEdit.name
-        const response = await fetch(`https://contacts-backend-w5bb.onrender.com/contact/${editId}?`, {
+        const response = await fetch(`apiUrl/contact/${editId}?`, {
           method: "PATCH",
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(editCopyData),
@@ -62,7 +64,7 @@ function EditingForm(){
         )
         const formData = new FormData();
         formData.append('file', imageEdit, imageEdit.name)
-        await fetch(`https://contacts-backend-w5bb.onrender.com/UploadImage/${editId}`, {
+        await fetch(`apiUrl/UploadImage/${editId}`, {
           method: "PATCH",
           body: formData
         })
