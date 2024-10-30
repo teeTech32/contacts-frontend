@@ -28,7 +28,7 @@ function EditingForm(){
     setIsloading(true)
     try{
       if(imageEdit === null){
-        const response = await fetch(`http://localhost:8000/contact/${editId}?`, {
+        const response = await fetch(`https://contacts-backend-w5bb.onrender.com/contact/${editId}?`, {
           method: "PATCH",
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(editData),
@@ -50,7 +50,7 @@ function EditingForm(){
           ...editData
         }
         editCopyData.photo_name = imageEdit.name
-        const response = await fetch(`http://localhost:8000/contact/${editId}?`, {
+        const response = await fetch(`https://contacts-backend-w5bb.onrender.com/contact/${editId}?`, {
           method: "PATCH",
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(editCopyData),
@@ -62,7 +62,7 @@ function EditingForm(){
         )
         const formData = new FormData();
         formData.append('file', imageEdit, imageEdit.name)
-        await fetch(`http://localhost:8000/UploadImage/${editId}`, {
+        await fetch(`https://contacts-backend-w5bb.onrender.com/UploadImage/${editId}`, {
           method: "PATCH",
           body: formData
         })
