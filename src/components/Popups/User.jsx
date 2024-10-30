@@ -48,7 +48,7 @@ function User(){
         setIsloading(true)
         const formData = new FormData();
         formData.append('file', editUserImage, editUserImage.name)
-        await fetch(`http://localhost:8000/UpdateUser/${username}`, {
+        await fetch(`https://contacts-backend-w5bb.onrender.com/UpdateUser/${username}`, {
           method: "PATCH",
           body: formData
         })
@@ -60,7 +60,7 @@ function User(){
       }
       if (editUserImage === null && editUser.full_name!==''){
         setIsloading(true)
-        await fetch(`http://localhost:8000/UpdateUserName/${username}?`, {
+        await fetch(`https://contacts-backend-w5bb.onrender.com/UpdateUserName/${username}?`, {
           method: "PATCH",
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(editUser),
@@ -75,14 +75,14 @@ function User(){
       }
       if (editUserImage !== null && editUser.full_name !== '' ){
         setIsloading(true)
-        await fetch(`http://localhost:8000/UpdateUserName/${username}?`, {
+        await fetch(`https://contacts-backend-w5bb.onrender.com/UpdateUserName/${username}?`, {
           method: "PATCH",
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(editUser),
         })
         const formData = new FormData();
         formData.append('file', editUserImage, editUserImage.name)
-        await fetch(`http://localhost:8000/UpdateUser/${username}`, {
+        await fetch(https://contacts-backend-w5bb.onrender.com/UpdateUser/${username}`, {
           method: "PATCH",
           body: formData
         })
