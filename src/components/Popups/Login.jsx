@@ -8,6 +8,8 @@ import { toast } from "react-toastify"
 import Spinner from "../Layouts/Spinner"
 import { FaEye, FaEyeSlash } from "react-icons/fa6"
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 function Login() {
   const navigate = useNavigate()
   const { loginInput, setLoginInput, isloading, setIsloading, login, visible, setVisible, fetchUser, setIsuser, fetchUsercontacts } = useContext(contactContext)
@@ -27,7 +29,7 @@ function Login() {
     formDetails.append('username', username)
     formDetails.append('password', password)
     try{
-      const response = await fetch('https://contacts-backend-w5bb.onrender.com/token/',{
+      const response = await fetch('apiUrl/token/',{
         method: "POST",
         headers:{'Content-Type':'application/x-www-form-urlencoded'},
         body: formDetails,
