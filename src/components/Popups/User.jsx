@@ -7,6 +7,8 @@ import ReactModal from "react-modal";
 import { toast } from "react-toastify";
 import Spinner from "../Layouts/Spinner";
 
+const apiUrl = process.env.REACT_APP_API_URL;
+
 function User(){
   const [editName, setEditName] = useState(false)
   const [editUserImage, setEditUserImage] = useState(null)
@@ -48,7 +50,7 @@ function User(){
         setIsloading(true)
         const formData = new FormData();
         formData.append('file', editUserImage, editUserImage.name)
-        await fetch(`https://contacts-backend-w5bb.onrender.com/UpdateUser/${username}`, {
+        await fetch(`apiUrl/UpdateUser/${username}`, {
           method: "PATCH",
           body: formData
         })
@@ -60,7 +62,7 @@ function User(){
       }
       if (editUserImage === null && editUser.full_name!==''){
         setIsloading(true)
-        await fetch(`https://contacts-backend-w5bb.onrender.com/UpdateUserName/${username}?`, {
+        await fetch(`apiUrl/UpdateUserName/${username}?`, {
           method: "PATCH",
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(editUser),
@@ -75,14 +77,14 @@ function User(){
       }
       if (editUserImage !== null && editUser.full_name !== '' ){
         setIsloading(true)
-        await fetch(`https://contacts-backend-w5bb.onrender.com/UpdateUserName/${username}?`, {
+        await fetch(`apiUrl/UpdateUserName/${username}?`, {
           method: "PATCH",
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(editUser),
         })
         const formData = new FormData();
         formData.append('file', editUserImage, editUserImage.name)
-        await fetch(`https://contacts-backend-w5bb.onrender.com/UpdateUser/${username}`, {
+        await fetch(`apiUrl/UpdateUser/${username}`, {
           method: "PATCH",
           body: formData
         })
