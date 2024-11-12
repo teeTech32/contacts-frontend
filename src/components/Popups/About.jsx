@@ -13,7 +13,7 @@ function About() {
 
   return (
     <ReactModal isOpen={about } appElement={document.getElementById('root')} className="style">
-     <div  class="scrollbar-thin scrollbar-thumb-pink-300 scrollbar-track-gray-500 h-80 overflow-y-scroll">
+     <div  class="scrollbar-thin scrollbar-thumb-pink-300 scrollbar-track-gray-500 h-120 overflow-y-scroll">
        <div class="relative text-center container bg-white text-black p-5 m-10 rounded-3xl">
          <DeletIcon onClick={() => {navigate(-1) 
          }} class="absolute text-2xl font-bold top-2 right-2 hover:bg-red-600 cursor-pointer" />
