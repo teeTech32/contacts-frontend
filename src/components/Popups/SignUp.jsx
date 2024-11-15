@@ -61,7 +61,7 @@ function SignUp() {
       } 
     }catch(error){
       setIsloading(false)
-      toast.error('Something whent wrong!')
+      toast.error('Check your internet connectivity!')
       }
   }
 
