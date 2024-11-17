@@ -31,7 +31,7 @@ function SignUp() {
       }
       signinDataCopy.user_image = password
       if(password===confirmPassword){
-        const response = await fetch('apiUrl/register/', {
+        const response = await fetch(`${apiUrl}/register/`, {
           method:"POST",
           headers:{"Content-Type": "application/json" },
           body: JSON.stringify(signinDataCopy)
