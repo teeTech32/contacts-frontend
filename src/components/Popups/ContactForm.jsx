@@ -45,11 +45,11 @@ function ContactForm(){
       inputDataCopy.username = username
       const formData = new FormData();
       formData.append('file', imageInput, imageInput.name)
-      await fetch('apiUrl/UploadImages/', {
+      await fetch(`${apiUrl}/UploadImages/`, {
         method:"POST",
         body:formData,
       })
-      const response = await fetch("apiUrl/contacts/", {
+      const response = await fetch(`${apiUrl}/contacts/`, {
         method: "POST",
         headers: { 'Content-Type': 'application/json' },
         body:JSON.stringify(inputDataCopy),
