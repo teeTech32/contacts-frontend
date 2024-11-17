@@ -29,7 +29,7 @@ function Login() {
     formDetails.append('username', username)
     formDetails.append('password', password)
     try{
-      const response = await fetch('apiUrl/token/',{
+      const response = await fetch(`${apiUrl}/token/`,{
         method: "POST",
         headers:{'Content-Type':'application/x-www-form-urlencoded'},
         body: formDetails,
