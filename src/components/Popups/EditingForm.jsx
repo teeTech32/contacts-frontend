@@ -30,7 +30,7 @@ function EditingForm(){
     setIsloading(true)
     try{
       if(imageEdit === null){
-        const response = await fetch(`apiUrl/contact/${editId}?`, {
+        const response = await fetch(`${apiUrl}/contact/${editId}?`, {
           method: "PATCH",
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(editData),
@@ -52,7 +52,7 @@ function EditingForm(){
           ...editData
         }
         editCopyData.photo_name = imageEdit.name
-        const response = await fetch(`apiUrl/contact/${editId}?`, {
+        const response = await fetch(`${apiUrl}/contact/${editId}?`, {
           method: "PATCH",
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(editCopyData),
@@ -64,7 +64,7 @@ function EditingForm(){
         )
         const formData = new FormData();
         formData.append('file', imageEdit, imageEdit.name)
-        await fetch(`apiUrl/UploadImage/${editId}`, {
+        await fetch(`${apiUrl}/UploadImage/${editId}`, {
           method: "PATCH",
           body: formData
         })
