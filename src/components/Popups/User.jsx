@@ -165,7 +165,7 @@ function User(){
                   <div class="h-20 lg:h-10 w-[250px] lg:w-[400px] mr-1 bg-gray-300 rounded  shadow-xl leading-10">
                     <div class="text-black font-bold ">
                       <h1 class="pl-2" >
-                        Date & Time : {date_created}
+                        Date & Time : {new Date(date_created).toLocaleString('en-US')}
                       </h1>
                     </div>
                   </div>
