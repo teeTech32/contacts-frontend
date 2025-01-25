@@ -50,7 +50,7 @@ const Testimonial = () => {
             data-aos-delay='100'
             data-aos-duration='1000'
             data-aos-easing='ease-in-sine' class="text-center mb-10 max-w-[600px] mx-auto space-y-3 ">
-            <p class="font-semibold text-secondary dark:text-yellow-400 text-xl lg:font-bold lg:text-3xl">Our Customers' Feedbacks</p>
+            <p class="font-semibold text-blue-500 text-xl lg:font-bold lg:text-3xl">Our Customers' Feedbacks</p>
             <h1 class="text-xl font-bold lg:text-2xl">Testimonials</h1>
             <p class="font-semibold lg:text-xl text-black dark:text-orange-500">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut commodi, dolor illum temporibus iusto enim.
@@ -72,7 +72,7 @@ const Testimonial = () => {
                     <div class="flex flex-col items-center  pt-2 lg:pt-4">
                       <div class="space-y-1 lg:space-y-2 ">
                         <p class="text-xs lg:text-lg text-black dark:text-white">{data.text}</p>
-                        <h1 class="text-lg font-bold lg:text-2xl text-orange-500">{data.name}
+                        <h1 class="text-lg font-bold lg:text-2xl text-blue-500">{data.name}
                         </h1>
                       </div>
                     </div>
