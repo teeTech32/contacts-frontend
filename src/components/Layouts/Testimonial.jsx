@@ -44,7 +44,7 @@ const Testimonial = () => {
     }
   return (
     <div className="">
-      <div class=" pt-20 bg-gray-200">
+      <div class=" pt-20 bg-white">
         <div data-aos='fade-up'
             data-aos-offset='300'
             data-aos-delay='100'
