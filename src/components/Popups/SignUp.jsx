@@ -112,7 +112,7 @@ function SignUp() {
               </button>
             </div>
             <div class="flex justify-center">
-              <p class="text-white mt-2">Already have an account? <span class="text-sm text-blue-500 hover:text-black font-bold mb-2 mt-2 pr-0  hover:cursor-pointer" onClick={()=>navigate('/login')}>Log In</span></p>
+              <p class="text-white mt-2">Already have an account ? <span class="text-sm text-blue-500 hover:text-black font-bold mb-2 mt-2 pr-0  hover:cursor-pointer" onClick={()=>navigate('/login')}>Log In</span></p>
             </div>
           </form>
         </div>
