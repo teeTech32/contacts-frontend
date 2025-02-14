@@ -116,7 +116,7 @@ function User(){
     }
   }
 
-  return <div class='bg-blue-950/75 bg-opacity-50 h-screen py-20'>
+  return <div class='bg-blue-950/75 bg-opacity-50 py-20'>
    { isloading ? <Spinner/> : <div class=" flex justify-center ">
       <div>
           <div class="bg-gradient-to-tr from-[#41606d] to-[#041218] rounded-md">
@@ -181,7 +181,7 @@ function User(){
                   </div>
                 </div>
               </div>
-              <div class="inline-flex mb-8  md:mt-10 lg:ml-2">
+              <div class="inline-flex mb-8  md:mt-10 lg:ml-2 ml-2">
                 <div className="center">
                   <div className="outer but">
                     <div class='lg:ml-10'>
@@ -193,7 +193,7 @@ function User(){
                     </div>
                   </div>
                   <Link to={`/contact/${username}`}>
-                    <div class='md:ml-20 lg:ml-24 '>
+                    <div class='md:ml-20 lg:ml-24 ml-10'>
                       <div className="outer cir">
                         <button >CreateContact</button>
                         <span></span>
