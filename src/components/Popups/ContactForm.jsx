@@ -1,5 +1,6 @@
 import { useContext} from "react"
 import { useParams, useNavigate} from "react-router-dom"
+import ReactModal from "react-modal"
 import contactContext from "../../contexts/ContactContext"
 import DeletIcon from "../ReactIcons/DeleteIcon"
 import {toast} from "react-toastify"
@@ -10,7 +11,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 function ContactForm(){ 
   const navigate = useNavigate()
   const params = useParams()
-  const {fetchContacts, imageInput, setImageInput, inputData, setInputData, isloading, setIsloading, contacts, setContacts, fetchUsercontacts
+  const {setAddform, addform, fetchContacts, imageInput, setImageInput, inputData, setInputData, isloading, setIsloading, contacts, setContacts, fetchUsercontacts
 } = useContext(contactContext)
   const { first_name, last_name, email, mobile_no, country_name, state_name, } = inputData
 
@@ -18,6 +19,7 @@ function ContactForm(){
   
   const handleForm = (e)=>{
     e.preventDefault()
+    setAddform(false)
     navigate(`/contact/${username}`)
   }
 
@@ -82,9 +84,9 @@ function ContactForm(){
     }) 
   }
 
-  return <div class='bg-blue-950/75 bg-opacity-50 h-screen py-20 px-5'>
+  return <ReactModal isOpen={addform} appElement={document.getElementById('root')} className="style">
           {isloading ? <Spinner/> : <div class="flex justify-center mb-0 mt-10">
-            <div class="container border-4 rounded-xl border-dashed border-blue-800 w-92 h-100 bg-gradient-to-t from-pink-800 to-blue-500 hover:shadow-2xl">
+            <div class="container border-4 rounded-xl border-dashed border-blue-800 w-96 h-100 bg-gradient-to-t from-pink-800 to-blue-500 hover:shadow-2xl">
               <div class="form">
                 <form onSubmit={handleSubmit}>
                   <div>
@@ -155,6 +157,6 @@ function ContactForm(){
             </div>
           </div>
           }
-        </div> 
+       </ReactModal> 
 }
 export default ContactForm
