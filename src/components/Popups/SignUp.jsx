@@ -1,6 +1,5 @@
 import { useContext, useState} from "react"
 import {useNavigate} from 'react-router-dom'
-import ReactModal from "react-modal"
 import contactContext from "../../contexts/ContactContext"
 import DeletIcon from "../ReactIcons/DeleteIcon"
 import { toast } from "react-toastify"
@@ -12,7 +11,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 function SignUp() {
   const navigate = useNavigate()
   const [confirmPassword, setConfirmPassword] = useState('')
-  const { signinData, setSigninData, isloading, setIsloading, signin, visible, setVisible, visibleC, setVisibleC, fetchUser, setIsuser, fetchUsercontacts } = useContext(contactContext)
+  const { signinData, setSigninData, isloading, setIsloading, visible, setVisible, visibleC, setVisibleC, fetchUser, setIsuser, fetchUsercontacts } = useContext(contactContext)
   const { full_name, username, password,} = signinData
 
   const handleOnchange = (e) => {
@@ -65,7 +64,7 @@ function SignUp() {
       }
   }
 
-  return <ReactModal isOpen={signin} appElement={document.getElementById('root')} className="style">
+  return <div class='bg-blue-950/75 bg-opacity-50 h-screen py-20'>
     {isloading ? <Spinner /> : <div class="flex justify-center mb-0 mt-0">
       <div class="relative border-4 rounded-xl border-dashed border-blue-800 w-64 h-90 bg-gradient-to-t from-pink-800 to-blue-500 hover:shadow-2xl pt-4 pb-6">
         <div class="form ">
@@ -119,6 +118,6 @@ function SignUp() {
       </div>
     </div>
     }
-  </ReactModal>
+  </div>
 }
 export default SignUp
