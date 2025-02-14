@@ -3,7 +3,6 @@ import { GrEdit } from "react-icons/gr";
 import { Link, useParams} from "react-router-dom";
 import contactContext from "../../contexts/ContactContext";
 import { BiSolidUser } from "react-icons/bi";
-import ReactModal from "react-modal";
 import { toast } from "react-toastify";
 import Spinner from "../Layouts/Spinner";
 
@@ -16,7 +15,7 @@ function User(){
     full_name: '',
   })
 
-  const { user, isuser, setRemoveUser, userContacts, fetchUser, isloading, setIsloading, fetchUsercontacts }=useContext(contactContext)
+  const { user, setRemoveUser, userContacts, fetchUser, isloading, setIsloading, fetchUsercontacts }=useContext(contactContext)
   const  {username, date_created, user_image} = user
   const {full_name} = editUser
 
@@ -117,7 +116,7 @@ function User(){
     }
   }
 
-  return <ReactModal isOpen={isuser} appElement={document.getElementById('root')} className="styleU">
+  return <div class='bg-blue-950/75 bg-opacity-50 h-screen py-20'>
    { isloading ? <Spinner/> : <div class=" flex justify-center ">
       <div>
           <div class="bg-gradient-to-tr from-[#41606d] to-[#041218] rounded-md">
@@ -209,7 +208,7 @@ function User(){
         </div>
       </div>
     }
-  </ReactModal>
+  </div>
 }
 
     
