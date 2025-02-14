@@ -11,7 +11,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 function SignUp() {
   const navigate = useNavigate()
   const [confirmPassword, setConfirmPassword] = useState('')
-  const { signinData, setSigninData, isloading, setIsloading, visible, setVisible, visibleC, setVisibleC, fetchUser, setIsuser, fetchUsercontacts } = useContext(contactContext)
+  const { signinData, setSigninData, isloading, setIsloading, visible, setVisible, visibleC, setVisibleC, fetchUser, fetchUsercontacts } = useContext(contactContext)
   const { full_name, username, password,} = signinData
 
   const handleOnchange = (e) => {
@@ -49,7 +49,6 @@ function SignUp() {
           toast.success(`Welcome ${full_name}`)
           setConfirmPassword('')
           navigate(`/user/${username}`)
-          setIsuser(true)
           setSigninData({
             full_name: '', username: '', password: ''
           })
