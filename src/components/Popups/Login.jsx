@@ -1,6 +1,5 @@
 import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
-import ReactModal from "react-modal"
 import contactContext from "../../contexts/ContactContext"
 import DeletIcon from "../ReactIcons/DeleteIcon"
 import googleIcon from '../assets/svg/googleIcon.svg'
@@ -12,7 +11,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 
 function Login() {
   const navigate = useNavigate()
-  const { loginInput, setLoginInput, isloading, setIsloading, login, visible, setVisible, fetchUser, setIsuser, fetchUsercontacts } = useContext(contactContext)
+  const { loginInput, setLoginInput, isloading, setIsloading,visible, setVisible, fetchUser, setIsuser, fetchUsercontacts } = useContext(contactContext)
   const { username, password } = loginInput
 
   const handleOnchange = (e) => {
@@ -57,7 +56,7 @@ function Login() {
       }
   }
 
-  return <ReactModal isOpen={login} appElement={document.getElementById('root')} className="style">
+  return <div class='bg-blue-950/75 bg-opacity-50 h-screen py-20'>
     { isloading ? <Spinner /> : <div class="flex justify-center mb-0 mt-0">
       <div class="relative border-4 rounded-xl border-dashed border-blue-800 w-64 h-90 bg-gradient-to-t from-pink-800 to-blue-500 hover:shadow-2xl pt-4 pb-6"> 
         <div class="form ">
@@ -115,6 +114,6 @@ function Login() {
       </div>
     </div>
     }
-  </ReactModal>
+  </div>
 }
 export default Login
