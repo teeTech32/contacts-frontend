@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
+import ReactModal from "react-modal"
 import contactContext from "../../contexts/ContactContext"
 import DeletIcon from "../ReactIcons/DeleteIcon"
 import {toast} from "react-toastify"
@@ -9,7 +10,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 
 function EditingForm(){
   const navigate = useNavigate()
-  const {fetchContacts, editData, setEditData, editId, imageEdit, setImageEdit, isloading, setIsloading, setContacts, contacts} = useContext(contactContext)
+  const { setAddedit, addedit, fetchContacts, editData, setEditData, editId, imageEdit, setImageEdit, isloading, setIsloading, setContacts, contacts} = useContext(contactContext)
   const { first_name, last_name, email, mobile_no, country_name, state_name} = editData
   
   const handleEditImage = (e)=>{
@@ -96,6 +97,7 @@ function EditingForm(){
   const handleForm = (e) => {
     e.preventDefault()
     navigate(-1)
+    setAddedit(false)
   }
 
   const clearDetails = ()=>{
@@ -104,9 +106,9 @@ function EditingForm(){
     })
   }
 
-  return <div class='bg-blue-950/75 bg-opacity-50 h-screen py-20 px-5'>
+  return <ReactModal isOpen={addedit} appElement={document.getElementById('root')} className="style">
     {isloading ? <Spinner/> : <div class="flex justify-center mb-20 mt-10">
-      <div class="container border-4 rounded-xl border-dashed border-blue-800 w-92 h-100 bg-gradient-to-b from-pink-500 to-blue-500 hover:shadow-2xl">
+      <div class="container border-4 rounded-xl border-dashed border-blue-800 w-96 h-100 bg-gradient-to-b from-pink-500 to-blue-500 hover:shadow-2xl">
         <div class="form">
           <form onSubmit={handleEdit}>
             <div>
@@ -180,6 +182,6 @@ function EditingForm(){
       </div>
     </div>
     }
-  </div>
+  </ReactModal>
 }
 export default EditingForm
