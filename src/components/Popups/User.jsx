@@ -193,7 +193,7 @@ function User(){
                     </div>
                   </div>
                   <Link to={`/contact/${username}`}>
-                    <div class='md:ml-20 lg:ml-24 ml-16'>
+                    <div class='md:ml-20 lg:ml-24 ml-24'>
                       <div className="outer cir">
                         <button >CreateContact</button>
                         <span></span>
