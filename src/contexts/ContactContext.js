@@ -11,12 +11,10 @@ export const ContactProvider = ({children}) =>{
   const [getbyId, setGetbyId,] = useState('')
   const [home, setHome] = useState(true)
   const [about, setAbout] = useState(true)
-  const [addform, setAddform] = useState(false)
   const [visible, setVisible] = useState(false)
   const [visibleC, setVisibleC] = useState(false)
   const [viewContacts, setViewContacts] = useState(false)
   const [viewProfile, setViewProfile] = useState(false)
-  const [addedit, setAddedit] = useState(false)
   const [editId, setEditId] = useState(null)
   const [handleRemoveContact, setHandleRemoveContact] = useState(false)
   const [contacts, setContacts] = useState([])
@@ -113,7 +111,6 @@ export const ContactProvider = ({children}) =>{
   }
 
   const onEditform = async (id) => {
-    setAddedit(true)
     const response = await api.get(`/contact/${id}?`)
     const edit = response.data
     setEditId(edit.id)
@@ -143,8 +140,6 @@ export const ContactProvider = ({children}) =>{
   
   return <contactContext.Provider value={{
               removeUser,
-              addform,
-              addedit,
               contacts,
               contact,
               viewContacts,
@@ -185,8 +180,6 @@ export const ContactProvider = ({children}) =>{
               setImageInput ,
               setViewContacts,
               setViewProfile,
-              setAddform,
-              setAddedit,
               onEditform,
               setEditData,
               setRemoveContact,
