@@ -181,7 +181,7 @@ function User(){
                   </div>
                 </div>
               </div>
-              <div class="inline-flex mb-8  md:mt-10 lg:ml-2 ml-2">
+              <div class="inline-flex flex-row mb-8 md:mt-10 lg:ml-2 ml-2">
                 <div className="center">
                   <div className="outer but">
                     <div class='lg:ml-10'>
@@ -193,7 +193,7 @@ function User(){
                     </div>
                   </div>
                   <Link to={`/contact/${username}`}>
-                    <div class='md:ml-20 lg:ml-24 ml-30'>
+                    <div class='md:ml-20 lg:ml-24 ml-16'>
                       <div className="outer cir">
                         <button >CreateContact</button>
                         <span></span>
