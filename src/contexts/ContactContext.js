@@ -2,7 +2,6 @@ import { createContext, useState } from "react";
 import api from '../api'
 import { toast } from 'react-toastify'
 
-
 const contactContext = createContext()
 
 export const ContactProvider = ({children}) =>{
@@ -27,8 +26,6 @@ export const ContactProvider = ({children}) =>{
   const [imageInput, setImageInput] = useState(null)
   const [notfound, setNotfound] = useState(false)
   const [isloading, setIsloading] = useState(false)
-  const [login, setLogin] = useState(true)
-  const [signin, setSignin] = useState(true)
   const [user, setUser] = useState({})
   const [inputData, setInputData] = useState({
     first_name: '',
@@ -162,10 +159,8 @@ export const ContactProvider = ({children}) =>{
               notfound,
               isloading,
               getbyId,
-              login,
               loginInput,
               visible,
-              signin,
               visibleC,
               about, 
               home,
@@ -181,9 +176,7 @@ export const ContactProvider = ({children}) =>{
               setAbout,
               setVisibleC, 
               setVisible,
-              setSignin,
               setLoginInput,
-              setLogin, 
               setGetbyId,
               setIsloading,
               setContacts,
