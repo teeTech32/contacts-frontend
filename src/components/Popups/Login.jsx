@@ -11,7 +11,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 
 function Login() {
   const navigate = useNavigate()
-  const { loginInput, setLoginInput, isloading, setIsloading,visible, setVisible, fetchUser, setIsuser, fetchUsercontacts } = useContext(contactContext)
+  const { loginInput, setLoginInput, isloading, setIsloading,visible, setVisible, fetchUser, fetchUsercontacts } = useContext(contactContext)
   const { username, password } = loginInput
 
   const handleOnchange = (e) => {
@@ -45,7 +45,6 @@ function Login() {
         setIsloading(false)
         toast.success('Welcome back')
         navigate(`/user/${username}`)
-        setIsuser(true)
         setLoginInput({
           password: '', username: ''
         }) 
