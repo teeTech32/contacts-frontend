@@ -110,8 +110,6 @@ function User(){
           })
           setEditUserImage(null)
         }, 2000)
-       
-
       }
     }
   }
@@ -192,8 +190,8 @@ function User(){
                       <span></span>
                     </div>
                   </div>
-                  <Link to={`/contact/${username}`}>
-                    <div class='md:ml-20 lg:ml-24 absolute top-0 left-34 md:top-2'>
+                  <Link to={`/contact/${username}`} class='absolute top-0 left-34 md:top-2'>
+                    <div class='md:ml-20 lg:ml-24'>
                       <div className="outer cir">
                         <button >CreateContact</button>
                         <span></span>
