@@ -117,7 +117,7 @@ function User(){
   return <div class='bg-blue-950/75 bg-opacity-50 py-20'>
    { isloading ? <Spinner/> : <div class=" flex justify-center ">
       <div>
-          <div class="bg-gradient-to-tr from-[#41606d] to-[#041218] rounded-md">
+          <div class="bg-gradient-to-tr from-[#41606d] to-[#041218] rounded-md relative">
             <div class="hover:cursor-pointer " onClick={() => {
               onSubmit(username)
               setEditName((prevState) => !prevState)
@@ -168,7 +168,7 @@ function User(){
                   </div>
                 </div>
               </div>
-              <div class='flex md:justify-start'>
+              <div class='flex md:justify-start mb-3'>
                 <div class="pr-3 pl-5 pt-5 pb-5">
                   <div class="h-10 w-56 bg-gray-300 rounded shadow-xl">
                     <div class="text-black font-bold ">
@@ -179,9 +179,9 @@ function User(){
                   </div>
                 </div>
               </div>
-              <div class="inline-flex flex-row mb-8 md:mt-10 lg:ml-2 ml-2 relative">
+              <div class="inline-flex flex-row mb-8 md:mt-10 lg:ml-2 ml-2">
                 <div className="center">
-                  <div className="outer but">
+                  <div className="outer but absolute bottom-3 md:bottom-8 left-5">
                     <div class='lg:ml-10'>
                       <button onClick={() => {
                         setRemoveUser(true)
@@ -190,7 +190,7 @@ function User(){
                       <span></span>
                     </div>
                   </div>
-                  <Link to={`/contact/${username}`} class={`absolute top-0 left-32 md:ml-10 sm:top-2 ${editName ? 'ml-7' : 'ml-2'}`}>
+                  <Link to={`/contact/${username}`} class="absolute bottom-3 md:bottom-8 right-5">
                     <div class='md:ml-20 lg:ml-24'>
                       <div className="outer cir">
                         <button >CreateContact</button>
