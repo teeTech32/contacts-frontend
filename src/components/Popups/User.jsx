@@ -181,7 +181,7 @@ function User(){
                   </div>
                 </div>
               </div>
-              <div class="inline-flex flex-row mb-8 md:mt-10 lg:ml-2 ml-2">
+              <div class="inline-flex flex-row mb-8 md:mt-10 lg:ml-2 ml-2 relative">
                 <div className="center">
                   <div className="outer but">
                     <div class='lg:ml-10'>
