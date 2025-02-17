@@ -38,11 +38,11 @@ function MegaNavbar(){
   }
 
   return <div>
-    <nav class="bg-gradient-to-l from-blue-700 via-pink-500 to-blue-700 mr-5 ml-5 rounded-t-lg hover:shadow-2xl xl:pl-60 xl:pr-10 md:pl-20 md:pr-20 relative">
-      <div class="navbar md:h-20 h-40 mx-auto max-w-7xl ">
+    <nav class="bg-gradient-to-l from-blue-700 via-pink-500 to-blue-700 mx-5 rounded-t-lg hover:shadow-2xl relative">
+      <div class="navbar md:h-20 h-44 mx-auto max-w-7xl ">
           <div class="flex flex-col md:flex-row">
-              <div class="flex-none md:absolute md:left-10 md:top-5">
-                <button class=" rounded-full  btn btn-ghost btn-md bg-blue-500 hover:bg-blue-800 shadow-2xl font-bold " onClick={handleContacts}>
+              <div class="absolute top-2 left-2 md:absolute md:left-10 md:top-5 mb-5">
+                <button class=" rounded-full btn btn-ghost btn-md bg-blue-500 hover:bg-blue-800 shadow-2xl font-bold " onClick={handleContacts}>
                   <div class="inline text-5xl">
                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1" viewBox="0 0 48 48" enable-background="new 0 0 48 48" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill="#FFA000" d="M38,12H22l-4-4H8c-2.2,0-4,1.8-4,4v24c0,2.2,1.8,4,4,4h31c1.7,0,3-1.3,3-3V16C42,13.8,40.2,12,38,12z"></path><path fill="#FFCA28" d="M42.2,18H15.3c-1.9,0-3.6,1.4-3.9,3.3L8,40h31.7c1.9,0,3.6-1.4,3.9-3.3l2.5-14C46.6,20.3,44.7,18,42.2,18z"></path></svg>
                   </div>
