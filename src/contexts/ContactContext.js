@@ -5,7 +5,6 @@ import { toast } from 'react-toastify'
 const contactContext = createContext()
 
 export const ContactProvider = ({children}) =>{
-  const [addedit, setAddedit] = useState(false)
   const [userContacts, setUserContacts] = useState([])
   const [removeUser, setRemoveUser] = useState(false)
   const [getbyId, setGetbyId,] = useState('')
@@ -111,7 +110,6 @@ export const ContactProvider = ({children}) =>{
   }
 
   const onEditform = async (id) => {
-    setAddedit(true)
     const response = await api.get(`/contact/${id}?`)
     const edit = response.data
     setEditId(edit.id)
@@ -141,7 +139,6 @@ export const ContactProvider = ({children}) =>{
   
   return <contactContext.Provider value={{
               removeUser,
-              addedit,
               contacts,
               contact,
               viewContacts,
@@ -182,7 +179,6 @@ export const ContactProvider = ({children}) =>{
               setViewProfile,
               onEditform,
               setEditData,
-              setAddedit,
               setRemoveContact,
               setHandleRemoveContact,
               fetchContacts,
