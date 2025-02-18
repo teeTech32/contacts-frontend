@@ -8,7 +8,7 @@ function LogOut() {
   const navigate = useNavigate()
   const params = useParams()
 
-  const { removeUser, setIsuser, setRemoveUser } = useContext(contactContext)
+  const { removeUser, setRemoveUser } = useContext(contactContext)
 
   const username = params.username
   
@@ -22,17 +22,14 @@ function LogOut() {
           </h1>
           <div class=" ">
             <div class="flex justify-center mt-5">
-              <button onClick={() => {setRemoveUser(false) 
-                setIsuser(true)
-              }} class="pr-16 pl-16 btn btn-md bg-transparent  hover:bg-blue-400 rounded-full shadow-2xl hover:text-white font-bold">
+              <button onClick={() => {setRemoveUser(false)}} class="pr-16 pl-16 btn btn-md bg-transparent  hover:bg-blue-400 rounded-full shadow-2xl hover:text-white font-bold">
                 NO
               </button>
             </div>
             <div class="flex justify-center mt-5 ">
               <button onClick={() => {
                                 toast.success(`Goodbye ${username}`)
-                                setTimeout(() => { navigate('/Homepage/')
-                                  window.location.reload()
+                                setTimeout(() => { navigate('/Homepage')
                                 }, 6000)
               }} class=" pr-16 pl-16 btn btn-md bg-transparent rounded-full shadow-2xl hover:text-white font-bold  hover:bg-blue-400">
                 YES
