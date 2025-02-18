@@ -61,7 +61,7 @@ function Login() {
         <div class="form ">
           <DeletIcon onClick={() => {
             navigate('/Homepage')}
-          } class="absolute text-2xl font-bold top-0 right-0 hover:bg-red-600 cursor-pointer" />
+          } class="absolute text-2xl text-white font-bold top-0 right-0 hover:text-red-600 cursor-pointer" />
           <form onSubmit={handleSubmit}>
             <div>
               <div class="bg-blue-500">
