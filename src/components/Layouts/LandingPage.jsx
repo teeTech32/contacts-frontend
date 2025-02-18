@@ -35,7 +35,7 @@ function LandingPage(){
               </div>
               <div className="button">
                 <button onClick={() => {
-                  navigate('/Homepage/')
+                  navigate('/Homepage')
                 }}>
                   Get Started
                 </button>
