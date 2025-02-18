@@ -16,7 +16,6 @@ import SignUp from './components/Popups/SignUp';
 import HomePage from './components/Layouts/HomePage';
 import About from './components/Popups/About';
 import User from './components/Popups/User';
-import LogOut from './components/Popups/LogOut';
 import Footer from './components/Layouts/Footer'
 import AOS from "aos";
 import "aos/dist/aos.css" ;
@@ -54,10 +53,7 @@ useEffect(()=>{
             <Router>
               <Routes>
                 <Route path="/" element={<LandingPage />} />
-                <Route path="/user/:username" element={<>
-            <User />
-            <LogOut />
-                </>} />
+                <Route path="/user/:username" element={<User/>}/>
                 <Route path="/about" element={<About />} />
                 <Route path="/login" element={<Login/>} />
                 <Route path="/Homepage" element={<HomePage/>} />
