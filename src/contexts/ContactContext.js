@@ -6,7 +6,6 @@ const contactContext = createContext()
 
 export const ContactProvider = ({children}) =>{
   const [addedit, setAddedit] = useState(false)
-  const [addform, setAddform] = useState(false)
   const [userContacts, setUserContacts] = useState([])
   const [isuser, setIsuser] = useState(false)
   const [removeUser, setRemoveUser] = useState(false)
@@ -143,7 +142,6 @@ export const ContactProvider = ({children}) =>{
   
   return <contactContext.Provider value={{
               removeUser,
-              addform,
               addedit,
               contacts,
               contact,
@@ -187,7 +185,6 @@ export const ContactProvider = ({children}) =>{
               setViewProfile,
               onEditform,
               setEditData,
-              setAddform,
               setAddedit,
               setRemoveContact,
               setHandleRemoveContact,
