@@ -5,6 +5,7 @@ import contactContext from "../../contexts/ContactContext";
 import { BiSolidUser } from "react-icons/bi";
 import { toast } from "react-toastify";
 import Spinner from "../Layouts/Spinner";
+import LogOut from "./LogOut";
 
 const apiUrl = process.env.REACT_APP_API_URL;
 
@@ -114,9 +115,8 @@ function User(){
     }
   }
 
-  return <div class='bg-blue-950/75 bg-opacity-50 py-20'>
-   { isloading ? <Spinner/> : <div class=" flex justify-center ">
-      <div>
+  return isloading ? <Spinner/> : <div class='bg-blue-950/75 bg-opacity-50  py-20'> 
+      <div class=" flex justify-center ">
           <div class="bg-gradient-to-tr from-[#41606d] to-[#041218] rounded-md relative">
             <div class="hover:cursor-pointer " onClick={() => {
               onSubmit(username)
@@ -162,7 +162,7 @@ function User(){
                   <div class="h-20 lg:h-10 w-[250px] lg:w-[400px] mr-1 bg-gray-300 rounded  shadow-xl leading-10">
                     <div class="text-black font-bold ">
                       <h1 class="pl-2" >
-                        Date & Time : {new Date(date_created).toLocaleString('en-US')}
+                        Date & Time :{ new Date(date_created).toLocaleString('en-US')}
                       </h1>
                     </div>
                   </div>
@@ -179,7 +179,7 @@ function User(){
                   </div>
                 </div>
               </div>
-              <div class="inline-flex flex-row mb-8 md:mt-10 lg:ml-2 ml-2">
+              <div class="inline-flex mb-8  md:mt-10 lg:ml-2">
                 <div className="center">
                   <div className="outer but absolute bottom-3 md:bottom-8 left-5">
                     <div class='lg:ml-10'>
@@ -190,7 +190,7 @@ function User(){
                       <span></span>
                     </div>
                   </div>
-                  <Link to={`/contact/${username}`} class="absolute bottom-3 md:bottom-8 right-5">
+                  <Link to={`/contact/${username}`} class="absolute bottom-3 md:bottom-8 right-5" >
                     <div class='md:ml-20 lg:ml-24'>
                       <div className="outer cir">
                         <button >CreateContact</button>
@@ -204,10 +204,8 @@ function User(){
             </div>
           </div>
         </div>
+        { removeUser && <LogOut/>}
       </div>
-    }
-  </div>
 }
-
     
-    export default User
+export default User
