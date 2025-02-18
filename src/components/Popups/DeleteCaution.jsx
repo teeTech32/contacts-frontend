@@ -2,7 +2,6 @@ import { useContext } from "react"
 import { useParams, useNavigate } from 'react-router-dom'
 import contactContext from "../../contexts/ContactContext"
 import ReactModal from "react-modal"
-import DeletIcon from "../ReactIcons/DeleteIcon"
 import api from "../../api"
 import { toast } from "react-toastify"
 
@@ -33,7 +32,6 @@ const navigate = useNavigate()
   return <ReactModal isOpen={removeContact} appElement={document.getElementById('root')} className="style">
         <div class="p-5 flex justify-center">
           <div class="p-5 container relative hover:text-white h-40 w-56 bg-pink-200 rounded-t-3xl rounded-bl-3xl hover:bg-blue-400 shadow-xl">
-             <DeletIcon onClick={() =>navigate(-1)} class="absolute text-2xl font-bold top-1 right-1 hover:bg-red-600 rounded-tr-xl cursor-pointer" />
             <div class="text-black-800 font-bold text-xl">
               <h1 class="mb-2 ">
                 Do you really want to delete this contact?
