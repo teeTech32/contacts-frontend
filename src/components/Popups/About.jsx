@@ -16,7 +16,7 @@ function About() {
      <div  class="scrollbar-thin scrollbar-thumb-pink-300 scrollbar-track-gray-500 h-80 overflow-y-scroll">
        <div class="relative text-center container bg-white text-black p-5 m-10 rounded-3xl">
          <DeletIcon onClick={() => {navigate(-1) 
-         }} class="absolute text-2xl font-bold top-2 right-2 hover:bg-red-600 cursor-pointer" />
+         }} class="absolute text-2xl font-bold top-2 right-2 hover:text-red-600 cursor-pointer" />
          <h1 class="text-4xl font-bold mb-4">Contact Application</h1>
          <p class="mb-4 text-xl font-ligth">This is a fullstack App that saves contact details, which involeved both the frontend and the backend technologies. The backend technologies are: python(fastAPI), postgreSQL, AWS(S3 Buckect), while the frontend technologies are:Reactjs, TailwindCSS and DaisyUI, React-toastify to mension few. Docker was also used for balancing and proper networking among different applications in a containerized form. It includes Login and Sign Up Authentication and Authorization, Add contact, Edit(Update) contact and Delete contact.
          </p>
