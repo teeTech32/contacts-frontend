@@ -1,20 +1,19 @@
 import { useContext } from "react"
 import { useNavigate, useParams } from 'react-router-dom'
 import contactContext from "../../contexts/ContactContext"
-import ReactModal from "react-modal"
 import { toast } from "react-toastify"
 
 function LogOut() {
   const navigate = useNavigate()
   const params = useParams()
 
-  const { removeUser, setRemoveUser } = useContext(contactContext)
+  const {setRemoveUser} = useContext(contactContext)
 
   const username = params.username
   
 
-  return <ReactModal isOpen={removeUser} appElement={document.getElementById('root')} className="styleLogout">
-    <div class="p-5 flex justify-center">
+  return <div class='bg-blue-950 bg-opacity-50 h-full w-screen top-0 pb-20 backdrop-blur-sm z-50 fixed'>
+    <div class="p-5 flex justify-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute">
       <div class="p-5 container relative  h-50 w-56 bg-pink-300 rounded-t-3xl rounded-bl-3xl shadow-xl">
         <div class="text-black-800 font-bold text-xl">
           <h1 class="mb-2 ">
@@ -39,6 +38,6 @@ function LogOut() {
         </div>
       </div>
     </div>
-  </ReactModal>
+  </div>
 }
 export default LogOut
