@@ -94,19 +94,19 @@ function ContactForm(){
                     </div>
                   </div>
                   <div class="mr-5  mb-5 mt-5">
-                    <div class="inline-flex justify-between ml-2 gap-9">
+                    <div class="inline-flex justify-between ml-2 gap-8 md:gap-12">
                       <label htmlFor="FirstName" class="form-title label text-md font-bold  text-black">FirstName</label>
                       <input id="first_name" value={first_name} onChange={handleOnchange} class="input input-sm w-sm pr-30 mr-0  ml-19 hover:bg-blue-200 text-black" placeholder="First_Name" type="text" required />
                     </div>
-                    <div class="inline-flex justify-between mt-2 p-2 gap-9">
+                    <div class="inline-flex justify-between mt-2 p-2 gap-8 md:gap-12">
                       <label htmlFor="LastName" class="form-title label text-md font-bold  text-black">LastName</label>
                       <input id="last_name" value={last_name} onChange={handleOnchange} class="input input-sm w-sm pr-30 mr-0 ml-19 hover:bg-blue-200 text-black" placeholder="Last_Name" type="text" required />
                     </div>
-                    <div class="inline-flex justify-between p-2 gap-3">
+                    <div class="inline-flex justify-between p-2 gap-2 md:gap-5">
                       <label htmlFor="EmailAddress" class="form-title label text-md font-bold  text-black">EmailAddress</label>
                       <input id="email" value={email} onChange={handleOnchange} class="input input-sm w-sm pr-30 mr-0 ml-19 hover:bg-blue-200 text-black" placeholder="Email_Address" type="email" required />
                     </div>
-                    <div class="inline-flex justify-between p-2 gap-1">
+                    <div class="inline-flex justify-between p-2 gap-0 md:gap-3">
                       <label htmlFor="MobileContact" class="form-title label text-md font-bold  text-black">MobileContact</label>
                       <input id="mobile_no" value={mobile_no} onChange={handleOnchange} class="input input-sm w-sm pr-30 mr-0 ml-19 hover:bg-blue-200 text-black" placeholder="Phone_Number" type="text" required />
                     </div>
