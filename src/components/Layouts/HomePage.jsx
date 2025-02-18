@@ -5,7 +5,7 @@ function HomePage (){
   
   const navigate = useNavigate()
 
-  return <div className="styleH">
+  return <div className="styleH bg-blue-950/75 bg-opacity-50">
     <div>
       <div>
         <p class="flex text-3xl font-bold text-transparent  bg-clip-text bg-gradient-to-r from-blue-500 to-pink-600 pb-40 ">Make A Choice</p>
