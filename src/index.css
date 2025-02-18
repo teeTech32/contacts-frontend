@@ -64,7 +64,6 @@ body {
   margin: 0 ;
   padding: 0;
   box-sizing: border-box;
-  background: linear-gradient(to right, #2c5364, #0f2027);
   height: 100vh;
   display: flex;
   align-items: center;
