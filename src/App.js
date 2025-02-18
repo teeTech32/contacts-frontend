@@ -17,6 +17,7 @@ import HomePage from './components/Layouts/HomePage';
 import About from './components/Popups/About';
 import User from './components/Popups/User';
 import LogOut from './components/Popups/LogOut';
+import Footer from './components/Layouts/Footer'
 import AOS from "aos";
 import "aos/dist/aos.css" ;
 
@@ -69,6 +70,7 @@ useEffect(()=>{
               <ContactPreview />
             </Router>
             <Profile />
+            <Footer/>
           </ContactProvider>
           <ToastContainer/>
         </div>
