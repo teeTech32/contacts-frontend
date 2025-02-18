@@ -48,7 +48,7 @@ useEffect(()=>{
   //eslint-disable-next-line
 },[])
 
-  return isloading ? <Spinner/> : <div>
+  return isloading ? <Spinner/> : <div class="bg-blue-950/75 bg-opacity-50">
           <ContactProvider>
             <Router>
               <Routes>
