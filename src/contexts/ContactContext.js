@@ -8,7 +8,6 @@ export const ContactProvider = ({children}) =>{
   const [userContacts, setUserContacts] = useState([])
   const [removeUser, setRemoveUser] = useState(false)
   const [getbyId, setGetbyId,] = useState('')
-  const [home, setHome] = useState(true)
   const [about, setAbout] = useState(true)
   const [visible, setVisible] = useState(false)
   const [visibleC, setVisibleC] = useState(false)
@@ -157,14 +156,12 @@ export const ContactProvider = ({children}) =>{
               visible,
               visibleC,
               about, 
-              home,
               signinData,
               user,
               userContacts,
               fetchUser,
               setSigninData,
               setUser,
-              setHome,
               setAbout,
               setVisibleC, 
               setVisible,
