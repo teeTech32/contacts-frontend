@@ -113,7 +113,7 @@ function EditingForm(){
             <div>
               <div class="relative navbar justify-center item-center bg bg-blue-500">
                 <h1 class="font-sans text-white font-bold text-2xl">Edit Contact</h1>
-                <DeletIcon onClick={handleForm} class="absolute text-2xl font-bold top-0 right-0 hover:bg-red-600 cursor-pointer" />
+                <DeletIcon onClick={handleForm} class="absolute text-2xl font-bold top-0 right-0 hover:text-red-600 cursor-pointer" />
               </div>
             </div>
             <div class="mr-5  mb-5 mt-5">
