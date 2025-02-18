@@ -65,7 +65,7 @@ useEffect(()=>{
                 <Route path="/contact/:username" element={<Home/>} />
                 <Route path="/contac/:id" element={<DeleteCaution />} />
                 <Route path="/contactForm/:username" element={<ContactForm />} />
-                <Route path="/contactEdit/" element={<EditingForm />} />
+                <Route path="/contact/contactEdit" element={<EditingForm />} />
               </Routes>
               <ContactPreview />
             </Router>
