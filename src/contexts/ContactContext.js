@@ -7,7 +7,6 @@ const contactContext = createContext()
 export const ContactProvider = ({children}) =>{
   const [addedit, setAddedit] = useState(false)
   const [userContacts, setUserContacts] = useState([])
-  const [isuser, setIsuser] = useState(false)
   const [removeUser, setRemoveUser] = useState(false)
   const [getbyId, setGetbyId,] = useState('')
   const [home, setHome] = useState(true)
@@ -164,9 +163,7 @@ export const ContactProvider = ({children}) =>{
               home,
               signinData,
               user,
-              isuser,
               userContacts,
-              setIsuser,
               fetchUser,
               setSigninData,
               setUser,
