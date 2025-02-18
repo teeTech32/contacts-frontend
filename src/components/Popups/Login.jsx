@@ -60,8 +60,7 @@ function Login() {
       <div class="relative border-4 rounded-xl border-dashed border-blue-800 w-64 h-90 bg-gradient-to-t from-pink-800 to-blue-500 hover:shadow-2xl pt-4 pb-6"> 
         <div class="form ">
           <DeletIcon onClick={() => {
-            navigate('/Homepage/')
-            window.location.reload()}
+            navigate('/Homepage')}
           } class="absolute text-2xl font-bold top-0 right-0 hover:bg-red-600 cursor-pointer" />
           <form onSubmit={handleSubmit}>
             <div>
