@@ -1,6 +1,5 @@
 import { useContext } from "react"
 import { useNavigate } from "react-router-dom"
-import ReactModal from "react-modal"
 import contactContext from "../../contexts/ContactContext"
 import DeletIcon from "../ReactIcons/DeleteIcon"
 import {toast} from "react-toastify"
@@ -10,7 +9,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 
 function EditingForm(){
   const navigate = useNavigate()
-  const { setAddedit, addedit, fetchContacts, editData, setEditData, editId, imageEdit, setImageEdit, isloading, setIsloading, setContacts, contacts} = useContext(contactContext)
+  const {setViewContacts, fetchContacts, editData, setEditData, editId, imageEdit, setImageEdit, isloading, setIsloading, setContacts, contacts} = useContext(contactContext)
   const { first_name, last_name, email, mobile_no, country_name, state_name} = editData
   
   const handleEditImage = (e)=>{
@@ -96,8 +95,8 @@ function EditingForm(){
       
   const handleForm = (e) => {
     e.preventDefault()
+    setViewContacts(true)
     navigate(-1)
-    setAddedit(false)
   }
 
   const clearDetails = ()=>{
@@ -106,9 +105,9 @@ function EditingForm(){
     })
   }
 
-  return <ReactModal isOpen={addedit} appElement={document.getElementById('root')} className="style">
-    {isloading ? <Spinner/> : <div class="flex justify-center mb-20 mt-10">
-      <div class="container border-4 rounded-xl border-dashed border-blue-800 w-96 h-100 bg-gradient-to-b from-pink-500 to-blue-500 hover:shadow-2xl">
+   return <div class='bg-blue-950/75 bg-opacity-50 py-20'>
+    {isloading ? <Spinner/> : <div class="flex justify-center my-20">
+      <div class="container border-4 rounded-xl border-dashed border-blue-800 w-[350px] h-100 bg-gradient-to-b from-pink-500 to-blue-500 hover:shadow-2xl">
         <div class="form">
           <form onSubmit={handleEdit}>
             <div>
@@ -117,35 +116,37 @@ function EditingForm(){
                 <DeletIcon onClick={handleForm} class="absolute text-2xl font-bold top-0 right-0 hover:bg-red-600 cursor-pointer" />
               </div>
             </div>
-            <div class="mr-5 ml-3 mb-5 mt-5">
-              <div class="inline-flex justify-between ml-2 gap-16">
+            <div class="mr-5  mb-5 mt-5">
+              <div class="inline-flex justify-between ml-2 gap-8 md:gap-12">
                 <label htmlFor="FirstName" class="form-title label text-md font-bold  text-black">FirstName</label>
                 <input id="first_name" value={first_name} onChange={handleOnchange} class="input input-sm w-sm pr-30 mr-0  ml-19 hover:bg-blue-200 text-black" placeholder="First_Name" type="text" />
               </div>
-              <div class="inline-flex justify-between mt-2 p-2 gap-16">
+              <div class="inline-flex justify-between mt-2 p-2 gap-8 md:gap-12">
                 <label htmlFor="LastName" class="form-title label text-md font-bold  text-black">LastName</label>
                 <input id="last_name" value={last_name} onChange={handleOnchange} class="input input-sm w-sm pr-30 mr-0 ml-19 hover:bg-blue-200 text-black" placeholder="Last_Name" type="text" />
               </div>
-              <div class="inline-flex justify-between p-2 gap-9">
+              <div class="inline-flex justify-between p-2 gap-2 md:gap-5">
                 <label htmlFor="EmailAddress" class="form-title label text-md font-bold  text-black">EmailAddress</label>
                 <input id="email" value={email} onChange={handleOnchange} class="input input-sm w-sm pr-30 mr-0 ml-19 hover:bg-blue-200 text-black" placeholder="Email_Address" type="email" />
               </div>
-              <div class="inline-flex justify-between p-2 gap-7">
+              <div class="inline-flex justify-between p-2 gap-0 md:gap-3">
                 <label htmlFor="MobileContact" class="form-title label text-md font-bold  text-black">MobileContact</label>
                 <input id="mobile_no" value={mobile_no} onChange={handleOnchange} class="input input-sm w-sm pr-30 mr-0 ml-19 hover:bg-blue-200 text-black" placeholder="Phone_Number" type="text" />
               </div>
-              <div class="inline-flex justify-between pl-2 pr-0 pt-2  gap-40">
-                <label htmlFor="CountryN" class="form-title label text-md font-bold  text-black">CountryN</label>
-                <select id="country_name" value={country_name} onChange={handleOnchange} class="input input-sm w-sm pr-30 ml-19 hover:bg-blue-200 text-black" placeholder="Country_Name" type="multiple" >
-                  <option value="Nigeria">Nigeria</option>
-                  <option value="United K">United K</option>
-                  <option value="United S">United S</option>
-                  <option value="Canada">Canada</option>
+              <div class="inline-flex justify-between pl-2 gap-12">
+                <label htmlFor="CountryN" class="form-title label text-md font-bold  text-black">Country</label>
+                <select id="country_name" value={country_name} onChange={handleOnchange} class=" input input-sm w-[200px] pr-30 ml-19 hover:bg-blue-200 text-black" placeholder="Country_Name" type="multiple" required >
+                        <option value=""></option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="United K">United K</option>
+                        <option value="United S">United S</option>
+                        <option value="Canada">Canada</option>
                 </select>
               </div>
-              <div class="inline-flex  p-3 gap-36">
-                <label htmlFor="StateName" class="form-title label text-md font-bold  text-black">StateName</label>
-                <select id="state_name" value={state_name} onChange={handleOnchange} class="input input-sm w-sm pr-30 mr-0 ml-19 hover:bg-blue-200 text-black" placeholder="State_Name" type="multiple">
+              <div class="inline-flex  p-3 gap-16">
+                <label htmlFor="StateName" class="form-title label text-md font-bold  text-black">State</label>
+                <select id="state_name" value={state_name} onChange={handleOnchange} class="input input-sm w-[200px] pr-30 mr-0 ml-19 hover:bg-blue-200 text-black" placeholder="State_Name" type="multiple" required>
+                  <option value=""></option>
                   <option value="Delta">Delta</option>
                   <option value="Ogun">Ogun</option>
                   <option value="Lagos">Lagos</option>
@@ -160,13 +161,10 @@ function EditingForm(){
                   <option value="Quebec">Quebec</option>
                 </select>
               </div>
-              <div class="inline-flex justify-between pl-2 gap-1">
+              <div class="inline-flex justify-between pl-2 gap-14">
                 <label htmlFor="Picture" class="form-title label text-md font-bold  text-black">Picture</label>
-                <input id="files" class="input input-sm w-30 pr-0 mr-0 ml-19 hover:bg-blue-200 text-black" type="file"
-                  max='1'
-                  accept='.jpg,.png,.jpeg'
-                  onChange={handleEditImage}
-                />
+                <input id="files" class="input input-sm w-[200px] pr-0 mr-0 ml-19 hover:bg-blue-200 text-black" type="file" 
+                accept='.jpg,.png,.jpeg' onChange={handleEditImage} />
               </div>
             </div>
             <div class="flex inlineflex mb-5 mr-5 float-right ">
@@ -182,6 +180,6 @@ function EditingForm(){
       </div>
     </div>
     }
-  </ReactModal>
+  </div>
 }
 export default EditingForm
