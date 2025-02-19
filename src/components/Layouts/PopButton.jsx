@@ -11,7 +11,11 @@ const handleForm = ()=>{
   navigate(`/contactForm/${username}`)  
 }
 
-  return <div class="flex justify-center ">
+  return <div class="flex justify-center" data-aos='zoom-in'
+                                          data-aos-offset='300'
+                                          data-aos-delay='300'
+                                          data-aos-duration='3000'
+                                          data-aos-easing='ease-in-sine'>
             <div class="max-w-64  card-body">
               <div class=" bg-pink-300 rounded-t-3xl hover:bg-blue-500  rounded-bl-3xl shadow-2xl text-base-content mt-5 relative">
               <DeletIcon onClick={()=>
