@@ -106,7 +106,11 @@ function EditingForm(){
   }
 
    return <div class='bg-blue-950/75 bg-opacity-50 py-20'>
-    {isloading ? <Spinner/> : <div class="flex justify-center my-20">
+    {isloading ? <Spinner/> : <div data-aos='zoom-out'
+                                   data-aos-offset='100'
+                                   data-aos-delay='200'
+                                   data-aos-duration='2000'
+                                   data-aos-easing='ease-in-sine' class="flex justify-center my-20">
       <div class="container border-4 rounded-xl border-dashed border-blue-800 w-[350px] h-100 bg-gradient-to-b from-pink-500 to-blue-500 hover:shadow-2xl">
         <div class="form">
           <form onSubmit={handleEdit}>
