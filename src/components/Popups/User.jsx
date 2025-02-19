@@ -116,7 +116,9 @@ function User(){
   }
 
   return isloading ? <Spinner/> : <div class='bg-blue-950/75 bg-opacity-50  py-20'> 
-      <div class=" flex justify-center ">
+      <div data-aos="fade-down"
+           data-aos-easing="linear"
+           data-aos-duration="1500" class="flex justify-center">
           <div class="bg-gradient-to-tr from-[#41606d] to-[#041218] rounded-md relative">
             <div class="hover:cursor-pointer " onClick={() => {
               onSubmit(username)
