@@ -16,7 +16,7 @@ function User(){
     full_name: '',
   })
 
-  const { user, setRemoveUser, userContacts, fetchUser, isloading, setIsloading, fetchUsercontacts }=useContext(contactContext)
+  const { user,  removeUser, setRemoveUser, userContacts, fetchUser, isloading, setIsloading, fetchUsercontacts }=useContext(contactContext)
   const  {username, date_created, user_image} = user
   const {full_name} = editUser
 
