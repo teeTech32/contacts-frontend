@@ -64,7 +64,9 @@ function SignUp() {
   }
 
   return <div class='bg-blue-950/75 bg-opacity-50 h-screen py-20'>
-    {isloading ? <Spinner /> : <div class="flex justify-center mb-0 mt-0">
+    {isloading ? <Spinner /> : <div data-aos="fade-down"
+                                    data-aos-easing="linear"
+                                    data-aos-duration="1500" class="flex justify-center mb-0 mt-0">
       <div class="relative border-4 rounded-xl border-dashed border-blue-800 w-64 h-90 bg-gradient-to-t from-pink-800 to-blue-500 hover:shadow-2xl pt-4 pb-6">
         <div class="form ">
           <DeletIcon onClick={() =>{
