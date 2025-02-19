@@ -7,11 +7,19 @@ function LogOut() {
   const navigate = useNavigate()
   const params = useParams()
 
-  const {setRemoveUser} = useContext(contactContext)
+  const {setRemoveUser, setUser} = useContext(contactContext)
 
   const username = params.username
-  
 
+  const handleLogout = ()=>{
+    toast.success(`Goodbye ${username}`)
+    setTimeout(() => {
+      navigate('/Homepage')
+      setRemoveUser(false)
+      setUser('')
+    }, 6000)
+  }
+  
   return <div class='bg-blue-950 bg-opacity-50 h-full w-screen top-0 pb-20 backdrop-blur-sm z-50 fixed'>
     <div class="p-5 flex justify-center top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 absolute">
       <div class="p-5 container relative  h-50 w-56 bg-pink-300 rounded-t-3xl rounded-bl-3xl shadow-xl">
@@ -26,11 +34,7 @@ function LogOut() {
               </button>
             </div>
             <div class="flex justify-center mt-5 ">
-              <button onClick={() => {
-                                toast.success(`Goodbye ${username}`)
-                                setTimeout(() => { navigate('/Homepage')
-                                }, 6000)
-              }} class=" pr-16 pl-16 btn btn-md bg-transparent rounded-full shadow-2xl hover:text-white font-bold  hover:bg-blue-400">
+              <button onClick={handleLogout} class=" pr-16 pl-16 btn btn-md bg-transparent rounded-full shadow-2xl hover:text-white font-bold  hover:bg-blue-400">
                 YES
               </button>
             </div>
