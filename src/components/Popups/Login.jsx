@@ -43,8 +43,8 @@ function Login() {
         fetchUser(username)
         fetchUsercontacts(username)
         setIsloading(false)
-        toast.success('Welcome back')
-        navigate(`/user/${username}`)
+        toast.success(`Welcome back ${username}`)
+        setTimeout(()=>{navigate('/user')},1000)
         setLoginInput({
           password: '', username: ''
         }) 
