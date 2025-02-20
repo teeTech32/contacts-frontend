@@ -20,7 +20,7 @@ function Profile(){
           <div class="w-full mx-auto ">
             <div class="grid  md:grid-col-1 lg:grid-col-1 xl:grid-col-1 m-10  ">
               <div class="container relative border-2 border-blue-200 hover:border-pink-200 bg-pink-500 hover:bg-blue-500  rounded-xl">
-                <DeletIcon onClick={closeProfile} class="absolute text-2xl font-bold top-0 right-0 hover:bg-red-600 rounded-tr-md" />
+                <DeletIcon onClick={closeProfile} class="absolute text-xl text-white font-bold top-0 right-0 hover:text-red-600 rounded-tr-md" />
                 <div class="flex  flex-col md:flex-row">
                   <div class="flex justify-center md:inline ">
                     <div class=" mb-4 mt-7 mx-5 ">
