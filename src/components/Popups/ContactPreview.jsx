@@ -16,7 +16,7 @@ function ContactPreview(){
     <div class="flex justify-center sm:mt-0">
        <div class="scrollbar-thin scrollbar-thumb-pink-300 scrollbar-track-gray-500 h-80 overflow-y-scroll">
         <div class="container border-pink-300 border-8 shadow-2xl rounded-xl " >
-          <DeletIcon class="text-xl right-0 top-0 hover:bg-red-500 cursor-pointer" onClick={closeContacts} />
+          <DeletIcon class="text-xl text-white right-0 top-0 hover:text-red-500 cursor-pointer" onClick={closeContacts} />
           <div class="grid gap-8  md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 m-5 ">
             {
               contacts.map((contact) => (
