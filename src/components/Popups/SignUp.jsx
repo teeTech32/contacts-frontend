@@ -48,7 +48,7 @@ function SignUp() {
           setIsloading(false)
           toast.success(`Welcome ${full_name}`)
           setConfirmPassword('')
-          navigate(`/user/${username}`)
+          setTimeout(()=>{navigate('/user')},1000)
           setSigninData({
             full_name: '', username: '', password: ''
           })
