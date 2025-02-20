@@ -53,7 +53,7 @@ useEffect(()=>{
             <Router>
               <Routes>
                 <Route path="/" element={<LandingPage />} />
-                <Route path="/user/:username" element={<User/>}/>
+                <Route path="/user" element={<User/>}/>
                 <Route path="/about" element={<About />} />
                 <Route path="/login" element={<Login/>} />
                 <Route path="/Homepage" element={<HomePage/>} />
