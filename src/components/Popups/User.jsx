@@ -1,10 +1,9 @@
-import { useContext, useState, useEffect, useRef} from "react";
+import { useContext, useState} from "react";
 import { GrEdit } from "react-icons/gr";
-import { Link, useParams} from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import contactContext from "../../contexts/ContactContext";
 import { BiSolidUser } from "react-icons/bi";
 import { toast } from "react-toastify";
-import Spinner from "../Layouts/Spinner";
 import LogOut from "./LogOut";
 
 const apiUrl = process.env.REACT_APP_API_URL;
@@ -16,24 +15,10 @@ function User(){
     full_name: '',
   })
 
-  const { user,  removeUser, setRemoveUser, userContacts, fetchUser, isloading, setIsloading, fetchUsercontacts }=useContext(contactContext)
+  const { user,  removeUser, setRemoveUser, userContacts, fetchUser, setIsloading}=useContext(contactContext)
   const  {username, date_created, user_image} = user
   const {full_name} = editUser
 
-  const params = useParams()
-  const isMounted = useRef(true)
-
-  useEffect(()=>{
-    if(isMounted){
-      fetchUser(params.username)
-      fetchUsercontacts(params.username)
-    }
-    return ()=>{
-      isMounted.current = false
-    }
-    // eslint-disable-next-line
-  },[])
- 
   const onImage = (e) =>{
     setEditUserImage(e.target.files[0]) 
   }
@@ -115,7 +100,7 @@ function User(){
     }
   }
 
-  return isloading ? <Spinner/> : <div class='bg-blue-950/75 bg-opacity-50  py-20'> 
+  return user ? <div class='bg-blue-950/75 bg-opacity-50  py-20'> 
       <div data-aos="fade-down"
            data-aos-easing="linear"
            data-aos-duration="1500" class="flex justify-center">
@@ -207,7 +192,7 @@ function User(){
           </div>
         </div>
         { removeUser && <LogOut/>}
-      </div>
+      </div> : <Navigate to={'/Homepage'}/>
 }
     
 export default User
