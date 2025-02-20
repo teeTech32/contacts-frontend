@@ -12,7 +12,7 @@ function LogOut() {
   const username = params.username
 
   const handleLogout = ()=>{
-    toast.success(`Goodbye ${username}`)
+    toast.success(`Goodbye`)
     setTimeout(() => {
       navigate('/Homepage')
       setRemoveUser(false)
