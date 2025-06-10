@@ -26,7 +26,7 @@ function Profile(){
                     <div class=" mb-4 mt-7 mx-5 ">
                       <div class=" image-full ">
                         <figure>
-                          <img src={`https://mybucketcontacts.s3.amazonaws.com/${photo_name}`} alt="ProfileImage" class="object-cover h-60 w-40 rounded-md" />
+                          <img  src={`https://teetech-contact-bucket.s3.eu-north-1.amazonaws.com/${photo_name}`} alt="ProfileImage" class="object-cover h-60 w-40 rounded-md" />
                         </figure>
                       </div>
                     </div>
