@@ -24,7 +24,7 @@ function Preview({ contact: { first_name, last_name, photo_name, mobile_no, id }
                 <div>
                   <div class="avatar">
                     <div class="rounded-full shadow-xl w-14 h-14 ">
-                      <img src={`https://mybucketcontacts.s3.amazonaws.com/${photo_name}`} alt="Profile" class="object-cover" />
+                      <img  src={`https://teetech-contact-bucket.s3.eu-north-1.amazonaws.com/${photo_name}`} alt="Profile" class="object-cover" />
                     </div>
                   </div>
                 </div>
