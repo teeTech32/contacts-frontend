@@ -128,7 +128,7 @@ function User(){
                       <div class=" image-full md:float-left">
                         <button onClick={()=>setEditName(true)}>
                           <figure class="mt-10 md:mt-0 md:mb-5 ">
-                            {editName ? <BiSolidUser class="text-8xl text-gray-300 border-double border-4 border-gray-300 rounded-md ml-2" /> : < src={`https://teetech-contact-bucket.s3.eu-north-1.amazonaws.com/${user_image}`} alt='ProfileImage' class="object-cover h-40 w-30 rounded-md border-double border-4 border-gray-300" /> }
+                            {editName ? <BiSolidUser class="text-8xl text-gray-300 border-double border-4 border-gray-300 rounded-md ml-2" /> : <img src={`https://teetech-contact-bucket.s3.eu-north-1.amazonaws.com/${user_image}`} alt='ProfileImage' class="object-cover h-40 w-30 rounded-md border-double border-4 border-gray-300" /> }
                           </figure>
                         </button>
                       </div>
