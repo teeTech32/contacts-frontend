@@ -11,7 +11,7 @@ const handleForm = ()=>{
   navigate(`/contactForm/${username}`)  
 }
 
-  return <div class="flex justify-center mb-40" data-aos='zoom-in'
+  return <div class="flex justify-center" data-aos='zoom-in'
                                           data-aos-offset='300'
                                           data-aos-delay='300'
                                           data-aos-duration='3000'
