@@ -93,7 +93,7 @@ function Login() {
               </div>
               <div class="relative flex justify-center mb-0">
                 <input id="password" value={password} onChange={handleOnchange} class="bg-white input input-sm w-52 hover:bg-blue-200 text-black" placeholder="Password" type={visible ? "text" : "password"} required />
-                <div class="absolute right-5 bottom-1 cursor-pointer text-2xl" onClick={() => setVisible(!visible)}>
+                <div class="text-black absolute right-5 bottom-1 cursor-pointer text-2xl" onClick={() => setVisible(!visible)}>
                   {visible ? <FaEyeSlash /> : <FaEye />}
                 </div> 
               </div>
