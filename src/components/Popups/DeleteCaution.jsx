@@ -33,17 +33,17 @@ const navigate = useNavigate()
         <div class="p-5 flex justify-center">
           <div class="p-5 container relative hover:text-white h-40 w-56 bg-pink-200 rounded-t-3xl rounded-bl-3xl hover:bg-blue-400 shadow-xl">
             <div class="text-black-800 font-bold text-xl">
-              <h1 class="mb-2 ">
+              <h1 class="mb-2 text-black">
                 Do you really want to delete this contact?
               </h1>
               <div class="inline-flex gap-11 mb-0">
                 <div class="inline">
-                  <button onClick={()=> navigate(-1)} class="pr-4 pl-4 btn btn-sm bg-green-500 hover:bg-gradient-to-l from-green-700 via-blue-500 to-green-700 rounded-md shadow-2xl hover:text-white font-bold">
+                  <button onClick={()=> navigate(-1)} class="pr-4 pl-4 btn btn-sm bg-green-500 text-black hover:bg-gradient-to-l from-green-700 via-blue-500 to-green-700 rounded-md shadow-2xl hover:text-white font-bold">
                     Cancil
                   </button>
                 </div>
                 <div class="align-middle">
-                  <button onClick={() => comfirmDelete(id)} class=" pr-1 pl-1 btn btn-sm bg-red-500 rounded-md hover:bg-gradient-to-l from-red-700 via-blue-500 to-red-700 shadow-2xl hover:text-white font-bold">
+                  <button onClick={() => comfirmDelete(id)} class=" pr-1 pl-1 btn btn-sm text-black bg-red-500 rounded-md hover:bg-gradient-to-l from-red-700 via-blue-500 to-red-700 shadow-2xl hover:text-white font-bold">
                     Continue
                   </button>
                 </div>
