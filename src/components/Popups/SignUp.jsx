@@ -87,19 +87,19 @@ function SignUp() {
             </div>
             <div class="mr-2 ml-2 mb-0 mt-2">
               <div class="flex justify-center mt-3 mb-5">
-                <input id="full_name" value={full_name} onChange={handleOnchange} class="input input-sm w-52  hover:bg-blue-200 text-black" placeholder="Full_Name" type="text" required />
+                <input id="full_name" value={full_name} onChange={handleOnchange} class="bg-white input input-sm w-52  hover:bg-blue-200 text-black" placeholder="Full_Name" type="text" required />
               </div>
               <div class="flex justify-center mt-3 mb-5">
-                <input id="username" value={username} onChange={handleOnchange} class="input input-sm w-52  hover:bg-blue-200 text-black" placeholder="Email" type="email" required />
+                <input id="username" value={username} onChange={handleOnchange} class="bg-white input input-sm w-52  hover:bg-blue-200 text-black" placeholder="Email" type="email" required />
               </div>
               <div class="relative flex justify-center mb-5">
-                <input id="password" value={password} onChange={handleOnchange} class=" input input-sm w-52 hover:bg-blue-200 text-black" placeholder="Password" type={visible ? "text" : "password"} required />
+                <input id="password" value={password} onChange={handleOnchange} class="bg-white input input-sm w-52 hover:bg-blue-200 text-black" placeholder="Password" type={visible ? "text" : "password"} required />
                 <div class="absolute right-5 bottom-1 cursor-pointer text-2xl" onClick={()=>setVisible(!visible)}>
                   {visible ? <FaEyeSlash /> : <FaEye /> }
                 </div> 
               </div>
               <div class="relative flex justify-center mb-5">
-                <input id="confirmPassword" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} class=" input input-sm w-52 hover:bg-blue-200 text-black" placeholder="ConfirmPassword" type={visibleC ? "text" : "password"} required />
+                <input id="confirmPassword" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} class="bg-white input input-sm w-52 hover:bg-blue-200 text-black" placeholder="ConfirmPassword" type={visibleC ? "text" : "password"} required />
                 <div class="absolute right-5 bottom-1 cursor-pointer text-2xl" onClick={() => setVisibleC(!visibleC)}>
                   {visibleC ? <FaEyeSlash /> : <FaEye />}
                 </div>
