@@ -94,13 +94,13 @@ function SignUp() {
               </div>
               <div class="relative flex justify-center mb-5">
                 <input id="password" value={password} onChange={handleOnchange} class="bg-white input input-sm w-52 hover:bg-blue-200 text-black" placeholder="Password" type={visible ? "text" : "password"} required />
-                <div class="absolute right-5 bottom-1 cursor-pointer text-2xl" onClick={()=>setVisible(!visible)}>
+                <div class="text-black absolute right-5 bottom-1 cursor-pointer text-2xl" onClick={()=>setVisible(!visible)}>
                   {visible ? <FaEyeSlash /> : <FaEye /> }
                 </div> 
               </div>
               <div class="relative flex justify-center mb-5">
                 <input id="confirmPassword" value={confirmPassword} onChange={(e)=>setConfirmPassword(e.target.value)} class="bg-white input input-sm w-52 hover:bg-blue-200 text-black" placeholder="ConfirmPassword" type={visibleC ? "text" : "password"} required />
-                <div class="absolute right-5 bottom-1 cursor-pointer text-2xl" onClick={() => setVisibleC(!visibleC)}>
+                <div class="text-black absolute right-5 bottom-1 cursor-pointer text-2xl" onClick={() => setVisibleC(!visibleC)}>
                   {visibleC ? <FaEyeSlash /> : <FaEye />}
                 </div>
               </div>
